@@ -12,14 +12,12 @@ Execute `./gradlew build`.
 
 ## Tests
 
-To verify the implementation, some test cases are offered.
+To verify the implementation, some test cases are provided.
 Execute them by `./gradlew test`.
 
 ## Usage
 
-For a complete example on using the library, refer to `src/kotlin/tools/aqua/stars/logic/mtcq/MTCQTest.kt`. 
-
-The general steps are:
+The general steps of using this library are:
 
 ### 1. Initialize the evaluator
 
@@ -55,3 +53,5 @@ val testMtcqPred = predicate(Vehicle::class) { ctx, _ ->
 
 Done! You can now use the `testMtcqPred` like any predicate in STARS.
 If the MTCQ is non-Boolean, it is checked whether at least one answer is returned to evaluate the predicate.
+
+For more details on usage, check the test cases in `src/test/kotlin/tools/aqua/stars/logic/mtcq/MTCQEvaluatorTest.kt`.
