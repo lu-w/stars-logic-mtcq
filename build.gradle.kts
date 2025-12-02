@@ -25,7 +25,3 @@ dependencies {
 	testImplementation(kotlin("test"))
     testImplementation("tools.aqua:stars-data-av:1.0")
 }
-
-tasks.test {
-    useJUnitPlatform()
-}
