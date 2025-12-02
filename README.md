@@ -3,6 +3,8 @@
 A drop-in replacement for the default CMFTB logic used in [STARS](https://github.com/tudo-aqua/stars). 
 Metric Temporal Conjunctive Queries (MTCQs) are interpreted over a background ontology.
 This needs to be given by the user in one of the usual OWL file formats.
+Read more on MTCQs [here](https://link.springer.com/chapter/10.1007/978-3-031-57246-3_10).
+The used software for answering MTCQs is [Topllet](https://link.springer.com/chapter/10.1007/978-3-031-60698-4_18).
 
 ## Building
 
