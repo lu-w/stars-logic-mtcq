@@ -21,15 +21,16 @@ import tools.aqua.stars.core.evaluation.PredicateContext
 import tools.aqua.stars.core.types.*
 
 fun <
-    E : EntityType<E, T, S, U, D>,
-    T : TickDataType<E, T, S, U, D>,
-    S : SegmentType<E, T, S, U, D>,
-    U : TickUnit<U, D>,
-    D : TickDifference<D>> mtcq(
-  context: PredicateContext<E, T, S, U, D>,
-  mtcqString: String,
-  mtcqEvaluator: MTCQEvaluator<E, T, S, U, D>
+        E : EntityType<E, T, S, U, D>,
+        T : TickDataType<E, T, S, U, D>,
+        S : SegmentType<E, T, S, U, D>,
+        U : TickUnit<U, D>,
+        D : TickDifference<D>> mtcq(
+    context: PredicateContext<E, T, S, U, D>,
+    mtcqString: String,
+    mtcqEvaluator: MTCQEvaluator<E, T, S, U, D>,
+    dlConvertibleClasses: Set<Any> = setOf()
 ): Boolean {
-  val res = mtcqEvaluator.eval(context.segment, mtcqString)
-  return !res.isEmpty
+    val res = mtcqEvaluator.eval(context.segment, mtcqString, dlConvertibleClasses)
+    return !res.isEmpty
 }
